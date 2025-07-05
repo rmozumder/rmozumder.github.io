@@ -98,6 +98,7 @@ footer * {
   </nav>
 
   <main>
+     <input type="text" id="searchInput" placeholder="Search..." style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
     <h1>Blog</h1>
 
     <p>Welcome! This is where I’ll share updates, STEM tips, and reflections. Check back soon for posts!</p>
@@ -113,5 +114,17 @@ footer * {
   <footer>
     &copy; 2025 Richi Mozumder. All rights reserved.
   </footer>
+  
+    <script>
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+      const input = this.value.toLowerCase();
+      const sections = document.querySelectorAll('.project, .experience, section');
+
+      sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        section.style.display = text.includes(input) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
