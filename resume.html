@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Richi Mozumder | Home</title>
+  <title>Richi Mozumder | Building Log</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-<style>
+ <style>
   body {
     font-family: 'Poppins', sans-serif;
     margin: 0; padding: 0;
@@ -99,9 +99,37 @@ footer * {
     <a href="resume.html">Resume</a>
   </nav>
 
+ <main>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="building-log.html">Building Log</a>
+    <a href="resume.html">Resume</a>
+  </nav>
+
   <div class="resume">
     <h2>Resume</h2>
     <p>
       <a href="https://github.com/rmozumder/rmozumder.github.io/raw/main/resume.pdf" target="_blank">PDF</a>
     </p>
   </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Richi Mozumder. All rights reserved.
+  </footer>
+  
+    <script>
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+      const input = this.value.toLowerCase();
+      const sections = document.querySelectorAll('.project, .experience, section');
+
+      sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        section.style.display = text.includes(input) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
