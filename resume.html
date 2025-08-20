@@ -116,17 +116,5 @@ footer * {
     &copy; 2025 Richi Mozumder. All rights reserved.
   </footer>
   
-    <script>
-    document.getElementById('searchInput').addEventListener('keyup', function () {
-      const input = this.value.toLowerCase();
-      const sections = document.querySelectorAll('.project, .experience, section');
-
-      sections.forEach(section => {
-        const text = section.innerText.toLowerCase();
-        section.style.display = text.includes(input) ? '' : 'none';
-      });
-    });
-  </script>
-  
 </body>
 </html>
