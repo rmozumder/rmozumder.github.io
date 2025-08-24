@@ -31,17 +31,6 @@
     text-decoration: underline;
   }
      /* general links (not navbar) */
-a:not(nav a) {
-  color: ##58acf5; /* negative cursed energy */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a:not(nav a):hover {
-  color: ##8a9bff; /* JJK hollow purple */
-  text-shadow: 0 0 6px rgba(160,32,240,0.6);
-}
   header {
     text-align: center;
     padding: 4rem 1rem 2rem;
@@ -61,6 +50,19 @@ a:not(nav a):hover {
     margin: 0 auto 3rem;
     padding: 0 1rem;
   }
+   /* General links (not navbar) */
+main a, footer a {
+  color: #58acf5; /* cursed energy blue */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+main a:hover, footer a:hover {
+  color: #8a9bff; /* hollow purple */
+  text-shadow: 0 0 6px rgba(160,32,240,0.6);
+}
+
   section {
     margin-bottom: 2rem;
   }
