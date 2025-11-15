@@ -165,10 +165,10 @@ footer * {
 
 /* ===== LINKS INSIDE MAIN ===== */
 .main-content a {
-  color: #cc5b49;
+  color: #e88c7d;
 }
 
 .main-content a:hover {
-  color: ##e88879;
+  color: #b53926;
   text-shadow: 0 0 1px rgba(160,32,240,0.6);
 }
