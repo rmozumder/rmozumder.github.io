@@ -128,6 +128,14 @@ footer * {
   font-size: 1.2rem;
 }
 
+  .intro h2 {
+    font-weight: 600;
+    color: #001F54;
+    border-bottom: 2px solid #B22222; /* blood red underline */
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
 /* ===== CARDS ===== */
 .card {
   padding: 1.5rem;
