@@ -1,134 +1,30 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0; padding: 0;
-    background: #f9f9f9;
-    color: #222;
-    line-height: 1.6;
-  }
-  nav {
-    background: #001F54;
-    padding: 1rem 2rem;
-    display: flex;
-    gap: 1.5rem;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: #FF7900; /* orange hover */
-    text-decoration: underline;
-  }
-  
-  header {
-    text-align: center;
-    padding: 4rem 1rem 2rem;
-    color: #001F54;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  header p {
-    margin-top: 0.5rem;
-    font-weight: 300;
-    font-size: 1.2rem;
-  }
-  main {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    padding: 0 1rem;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap');
 
-  /* General links (not navbar) */
-main a, footer a {
-  color: #58acf5; /* cursed energy blue */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
   text-decoration: none;
-  font-weight: 500;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-main a:hover, footer a:hover {
-  color: #8a9bff; /* hollow purple */
-  text-shadow: 0 0 1px rgba(160,32,240,0.6);
-}
-
-  section {
-    margin-bottom: 2rem;
-  }
-  h2 {
-    font-weight: 600;
-    color: #001F54;
-    border-bottom: 2px solid #B22222; /* blood red underline */
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-  }
-  .project, .experience {
-    background: #c4cff5;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-.hero {
-  text-align: center;
-  padding: 5rem 1rem 3rem;
-  color: #001F54; 
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.3rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: 0;
-}
-
-/* Better homepage card layout */
-.cards {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
-.card1 {
-  background: #c4cff5;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card2 {
-  background: #77b2e1;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card1:hover , .card2:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-}
+/* ===== FOOTER ===== */
 footer {
-  position: relative;
   background-color: #8B1A1A;
   color: white;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
+  position: relative;
+  margin-top: auto; /* pushes footer to bottom */
   overflow: hidden;
 }
 
@@ -139,11 +35,112 @@ footer::before {
   background-image: url('itachi-eye-pattern.png');
   background-repeat: repeat;
   background-size: 25px 25px;
-  opacity: 0.1; /* adjusts visibility */
+  opacity: 0.1;
   z-index: 0;
 }
 
 footer * {
   position: relative;
   z-index: 1;
+}
+
+/* ===== SIDEBAR (HOME PAGE ONLY) ===== */
+.sidebar {
+  width: 220px;
+  background: #001F54;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+.sidebar a {
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar a:hover {
+  color: #FF7900;
+  text-decoration: underline;
+}
+
+/* ===== TOP NAV (OTHER PAGES) ===== */
+.navbar {
+  background: #001F54;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #FF7900;
+  text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== INTRO SECTION ===== */
+.intro {
+  margin-bottom: 2rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  color: #001F54;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+/* ===== CARDS ===== */
+.card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card.c4cff5 {
+  background: #c4cff5;
+}
+
+.card.c4cff5:hover {
+  color: #8a9bff;
+  transform: translateY(-5px);
+}
+
+.card.c77b2e1 {
+  background: #77b2e1;
+}
+
+.card.c77b2e1:hover {
+  color: #FF7900;
+  transform: translateY(-5px);
+}
+
+/* ===== LINKS INSIDE MAIN ===== */
+.main-content a {
+  color: #58acf5;
+}
+
+.main-content a:hover {
+  color: #8a9bff;
+  text-shadow: 0 0 1px rgba(160,32,240,0.6);
 }
