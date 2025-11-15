@@ -5,164 +5,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Richi Mozumder | Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-  <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0; padding: 0;
-    background: #f9f9f9;
-    color: #222;
-    line-height: 1.6;
-  }
-  nav {
-    background: #001F54;
-    padding: 1rem 2rem;
-    display: flex;
-    gap: 1.5rem;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: #FF7900; /* orange hover */
-    text-decoration: underline;
-  }
-      /* general links (not navbar) */
 
-  header {
-    text-align: center;
-    padding: 4rem 1rem 2rem;
-    color: #001F54;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  header p {
-    margin-top: 0.5rem;
-    font-weight: 300;
-    font-size: 1.2rem;
-  }
-  main {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    padding: 0 1rem;
-  }
-    /* General links (not navbar) */
-main a, footer a {
-  color: #58acf5; /* cursed energy blue */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-main a:hover, footer a:hover {
-  color: #8a9bff; /* hollow purple */
-  text-shadow: 0 0 1px rgba(160,32,240,0.6);
-}
-
-    section {
-    margin-bottom: 2rem;
-  }
-  h2 {
-    font-weight: 600;
-    color: #001F54;
-    border-bottom: 2px solid #B22222; /* blood red underline */
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-  }
-  .class1 {
-    background: #c4cff5;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  .class2 {
-    background: #77b2e1;
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }    
-     
-footer {
-  position: relative;
-  background-color: #8B1A1A;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  overflow: hidden;
-}
-
-footer::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('itachi-eye-pattern.png');
-  background-repeat: repeat;
-  background-size: 25px 25px;
-  opacity: 0.1; /* semi-apparent design*/
-  z-index: 0;
-}
-
-footer * {
-  position: relative;
-  z-index: 1;
-}
-</style>
+  <!-- Use shared Roboto font + shared stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
+
+  <!-- TOP NAVBAR (Non-homepage pages only) -->
+  <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="building-log.html">Building Log</a>
     <a href="resume.html">Experience</a>
-   <a href="passion-project.html">Passion Project</a>
+    <a href="passion-project.html">Passion Project</a>
   </nav>
 
-  <main>
+  <main class="main-content">
+    <section class="intro">
+      <h1>Projects & Research</h1>
+      <p>A collection of my STEM work — from NASA GeneLab to in-school experiments and independent builds.</p>
+    </section>
 
+    <!-- PROJECT 1 -->
+    <div class="card c4cff5">
+      <h2>
+        Kidney Spaceflight Metadata Analysis 
+        <img src="uchiha-fan.png" width="20" height="20">
+      </h2>
+      <p>Capstone project for NASA GeneLab focusing on kidney molecular pathways under microgravity conditions. Currently in progress.</p>
+    </div>
 
-    <h1>Projects & Research</h1>
-
-   <div class="class1">
-      <h2>Kidney Spaceflight Metadata Analysis <img src="uchiha-fan.png" width="20" height="20"></h2>
-      <p>Capstone Project for NASA Genelab. Currently a work in progress.</p>
-   <!--   <p><a href="https://github.com/yourusername/leukemia-project" target="_blank">GitHub Repo</a></p>  -->
-    </div> 
-  
-
-    <!-- <div class="class2">
+    <!-- PROJECT 2 (future example card; comment out if not needed) -->
+    <!--
+    <div class="card c77b2e1">
       <h2>Yeast Fermentation Rate Study</h2>
-      <p>Conducted experiments measuring fermentation rates in yeast under different environmental conditions using CO2 sensors and statistical analysis.</p>
-      <p><a href="https://github.com/yourusername/yeast-fermentation" target="_blank">GitHub Repo</a></p>
-    </div> 
+      <p>Measured fermentation rates under environmental variation using CO₂ sensors; analyzed growth curves & statistical significance.</p>
+    </div>
     -->
-
-    <!-- future add more projects -->
-
   </main>
 
   <footer>
     &copy; 2025 Richi Mozumder. All rights reserved.
   </footer>
-  
-    <script>
-    document.getElementById('searchInput').addEventListener('keyup', function () {
-      const input = this.value.toLowerCase();
-      const sections = document.querySelectorAll('.project, .experience, section');
 
-      sections.forEach(section => {
-        const text = section.innerText.toLowerCase();
-        section.style.display = text.includes(input) ? '' : 'none';
-      });
-    });
-  </script>
-  
 </body>
 </html>
-
