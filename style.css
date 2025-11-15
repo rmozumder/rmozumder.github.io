@@ -99,7 +99,7 @@ main a:hover, footer a:hover {
   padding: 1rem;
 }
 
-.card {
+.card1 {
   background: #c4cff5;
   padding: 1.5rem;
   border-radius: 10px;
@@ -109,7 +109,17 @@ main a:hover, footer a:hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card:hover {
+.card2 {
+  background: #77b2e1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card1:hover , .card2:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
