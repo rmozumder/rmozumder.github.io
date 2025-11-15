@@ -120,6 +120,7 @@ footer * {
 .intro h1 {
   font-size: 2.5rem;
   color: #001F54;
+  border-bottom: 2px solid #B22222; /* blood red underline */
   margin-bottom: 0.5rem;
 }
 
