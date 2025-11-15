@@ -84,8 +84,6 @@ footer * {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional glow */
 }
 
-
-
 /* ===== TOP NAV (OTHER PAGES) ===== */
 .navbar {
   background: #001F54;
@@ -96,12 +94,14 @@ footer * {
 
 .navbar a {
   color: white;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .navbar a:hover {
-  color: #FF7900;
-  text-decoration: underline;
+  background: #FF7900; /* full box background changes */
+  color: #fff;         /* text stays white */
+  transform: scale(1.03); /* subtle pop effect */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional glow */
 }
 
 /* ===== MAIN CONTENT ===== */
