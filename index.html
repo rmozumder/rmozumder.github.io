@@ -1,48 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richi Mozumder | Home</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Richi Mozumder | Home</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  /* Reset & Base */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; display: flex; min-height: 100vh; }
 
+  /* Sidebar for Home page */
+  nav.sidebar {
+    width: 220px;
+    background: #001F54;
+    color: white;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  nav.sidebar h2 { margin-bottom: 2rem; font-weight: 700; color: #FF7900; font-size: 1.4rem; text-align: center; }
+  nav.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  nav.sidebar a:hover { background: #FF7900; color: #fff; text-decoration: none; }
+
+  /* Main content */
+  main { flex: 1; padding: 2rem 3rem; max-width: 900px; margin: 0 auto; }
+
+  /* Intro section */
+  #intro { text-align: center; margin-bottom: 3rem; }
+  #intro h1 { font-size: 2.5rem; color: #001F54; margin-bottom: 0.5rem; }
+  #intro p { font-weight: 300; font-size: 1.2rem; color: #333; }
+
+  /* Cards section */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+
+  /* Card types */
+  .card-c4cff5 {
+    background: #c4cff5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-c4cff5:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .card-c4cff5 a:hover { color: #8a9bff; text-shadow: 0 0 2px rgba(160,32,240,0.6); }
+
+  .card-77b2e1 {
+    background: #77b2e1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-77b2e1:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .card-77b2e1 a:hover { color: #FF7900; text-shadow: 0 0 2px rgba(255,120,0,0.6); }
+
+  .card h2 { font-weight: 700; color: #001F54; margin-bottom: 0.8rem; border-bottom: 2px solid #B22222; padding-bottom: 0.3rem; }
+  .card p { font-weight: 300; color: #222; }
+  .card a { color: #58acf5; text-decoration: none; font-weight: 500; transition: color 0.3s ease, text-shadow 0.3s ease; }
+
+  /* Footer */
+  footer {
+    background-color: #8B1A1A;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    margin-top: 3rem;
+    overflow: hidden;
+  }
+  footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('itachi-eye-pattern.png');
+    background-repeat: repeat;
+    background-size: 25px 25px;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  footer * { position: relative; z-index: 1; }
+
+  /* Responsive */
+  @media (max-width: 768px){
+    body { flex-direction: column; }
+    nav.sidebar { width: 100%; height: auto; flex-direction: row; overflow-x: auto; padding: 1rem; }
+    nav.sidebar a { margin-right: 1rem; white-space: nowrap; }
+    main { padding: 2rem 1rem; }
+  }
+</style>
+</head>
 <body>
 
-  <nav>
+  <nav class="sidebar">
+    <h2>Richi</h2>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="building-log.html">Building Log</a>
-    <a href="resume.html">Resume</a>
+    <a href="resume.html">Experience</a>
     <a href="passion-project.html">Passion Project</a>
   </nav>
 
-  <header class="hero">
-    <h1>Richi Mozumder</h1>
-    <p>Physics • Biology • Engineering</p>
-  </header>
-
   <main>
+    <section id="intro">
+      <h1>Hi, I'm Richi Mozumder!</h1>
+      <p>High school junior passionate about research, physics, biology, and programming. Exploring STEM through self-study, competitions, and internships. Welcome to my portfolio!</p>
+    </section>
+
     <section class="cards">
-      <a href="projects.html" class="card1">
-        <h3>Projects</h3>
-        <p>Engineering, physics, and lab work.</p>
-      </a>
+      <div class="card card-c4cff5">
+        <h2>NASA GeneLab <img src="uchiha-fan.png" width="20" height="20"></h2>
+        <p>Analyzing gene expression data from spaceflight experiments as part of my capstone project. Work in progress.</p>
+      </div>
 
-      <a href="building-log.html" class="card1">
-        <h3>Building Log</h3>
-        <p>Notes, progress, experiments, mistakes.</p>
-      </a>
-
-      <a href="passion-project.html" class="card2">
-        <h3>Passion Project</h3>
-        <p>Intersection of biology and physics, with an intense pursuit of physics.</p>
-      </a>
+      <div class="card card-77b2e1">
+        <h2>Passion Project: Anime & Physics</h2>
+        <p>Linking anime scenarios to physics concepts to strengthen conceptual understanding in a fun way. First video coming soon!</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Richi Mozumder</p>
+    &copy; 2025 Richi Mozumder. All rights reserved.
   </footer>
 
 </body>
