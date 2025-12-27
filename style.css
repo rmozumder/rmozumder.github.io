@@ -44,6 +44,12 @@ footer * {
   z-index: 1;
 }
 
+/* ===== PAGE LAYOUT ===== */
+.layout {
+  display: flex;
+  flex: 1;
+}
+
 /* ===== SIDEBAR (HOME PAGE ONLY) ===== */
 .sidebar {
   width: 220px;
@@ -143,26 +149,29 @@ footer * {
   margin-bottom: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+}
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card.c4cff5 {
   background: #c4cff5;
 }
 
-.card.c4cff5:hover {
+.card.c4cff5.color-shift:hover {
   color: #8a9bff;
-  transform: translateY(-5px);
-}
+}  
 
 .card.c77b2e1 {
   background: #77b2e1;
 }
 
-.card.c77b2e1:hover {
-  color: #FF7900;
-  transform: translateY(-5px);
+.card.c77b2e1.color-shift:hover {
+  color: #FF7900; 
 }
+
 
 /* ===== LINKS INSIDE MAIN ===== */
 .main-content a {
@@ -172,4 +181,32 @@ footer * {
 .main-content a:hover {
   color: #b53926;
   text-shadow: 0 0 1px rgba(160,32,240,0.6);
+}
+
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .sidebar a {
+    margin: 0 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
 }
